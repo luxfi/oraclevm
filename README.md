@@ -1,11 +1,8 @@
 <p align="center">
-  <img width="90%" alt="morpheusvm" src="assets/logo.jpeg">
-</p>
-<p align="center">
   OracleVM
 </p>
 <p align="center">
-  <a href="https://github.com/bianyuanop/oraclevm/actions/workflows/oraclevm-unit-tests.yml"><img src="https://github.com/bianyuanop/oraclevm/actions/workflows/oraclevm-unit-tests.yml/badge.svg" /></a>
+  <a href="https://github.com/luxdefi/oraclevm/actions/workflows/oraclevm-unit-tests.yml"><img src="https://github.com/luxdefi/oraclevm/actions/workflows/oraclevm-unit-tests.yml/badge.svg" /></a>
 </p>
 
 [What is a blockchain oracle?](https://en.wikipedia.org/wiki/Blockchain_oracle)
@@ -14,7 +11,7 @@
 
 What is the advantage of OracleVM?
 
-The most advantage of OracleVM is about it can deliver any types of off-chain data to be accessible on-chain. By abstracting different data/aggregation methods into a set of universal interfaces, only with those interfaces get implemented for a specified entity, that kind of entity can be served by OracleVM easily. Also the approach is a subnet oracle solution, which means this approach can have advantages in terms of efficiency, scalability, and reducing the risk of network congestion. 
+The most advantage of OracleVM is about it can deliver any types of off-chain data to be accessible on-chain. By abstracting different data/aggregation methods into a set of universal interfaces, only with those interfaces get implemented for a specified entity, that kind of entity can be served by OracleVM easily. Also the approach is a subnet oracle solution, which means this approach can have advantages in terms of efficiency, scalability, and reducing the risk of network congestion.
 
 ## Workflow
 
@@ -75,7 +72,7 @@ An aggregator is placed in each `EntityCollection`, which is responsible for agg
 +----------------+                                                   +---------------+
 ```
 
-On chain query is done by sending a warp message to call `Query` action. 
+On chain query is done by sending a warp message to call `Query` action.
 
 [^Warp Message]: `hypersdk` provides support for Avalanche Warp Messaging (AWM) out-of-the-box. AWM enables any Avalanche Subnet to send arbitrary messages to any another Avalanche Subnet in just a few seconds (or less) without relying on a trusted relayer or bridge (just the validators of the Subnet sending the message). You can learn more about AWM and how it works [here](https://docs.google.com/presentation/d/1eV4IGMB7qNV7Fc4hp7NplWxK_1cFycwCMhjrcnsE9mU/edit).
 
@@ -92,7 +89,7 @@ On chain query is done by sending a warp message to call `Query` action.
 
 ## Entity & Aggregation Abstraction
 
-Entity 
+Entity
 
 ```go
 type Entity interface {
@@ -101,7 +98,7 @@ type Entity interface {
 	Marshal() []byte
 }
 
-func Unmarshal(b []bytes) (Entity, error) 
+func Unmarshal(b []bytes) (Entity, error)
 ```
 
 Aggregator
@@ -155,7 +152,7 @@ type StockAggregator struct {
 
 ## Developer Guides
 
-**Since OracleVM is modified based on [morpheusvm](https://github.com/ava-labs/hypersdk/tree/main/examples/morpheusvm), except the guides on how to add a new types of entity, all other guides are exactly the same.** 
+**Since OracleVM is modified based on [morpheusvm](https://github.com/ava-labs/hypersdk/tree/main/examples/morpheusvm), except the guides on how to add a new types of entity, all other guides are exactly the same.**
 
 The first step to running this demo is to launch your own `oracle` Subnet. You
 can do so by running the following command from this location (may take a few
