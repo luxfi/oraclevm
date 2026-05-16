@@ -1,6 +1,6 @@
 module github.com/bianyuanop/oraclevm
 
-go 1.26
+go 1.26.3
 
 require (
 	github.com/ava-labs/avalanche-network-runner v1.7.1
