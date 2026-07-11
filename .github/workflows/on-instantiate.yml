@@ -2,7 +2,7 @@ name: Template Instantiate
 on: create
 jobs:
   formatting:
-    runs-on: ubuntu-latest
+    runs-on: lux-build-amd64
     permissions: 
       contents: write
 
